@@ -1,0 +1,39 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "repo-security-check"
+version = "0.1.0"
+description = "A dependency-free CLI for open-source repository security hygiene."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { file = "LICENSE" }
+authors = [
+  { name = "Ahmed Munther" }
+]
+keywords = ["security", "github", "repository", "devsecops", "open-source"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Security",
+]
+
+[project.scripts]
+repo-security-check = "repo_security_check.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/ahmedx4i/repo-security-check"
+Issues = "https://github.com/ahmedx4i/repo-security-check/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/repo_security_check"]
